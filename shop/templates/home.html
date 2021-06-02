@@ -1,6 +1,21 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}
 Home{% endblock %}
 {% block content %}
-<h1>Home</h1>
+<div style="width:100%;height:500px;"><img style="width:100%;height:100%;" src="{% static 'images/док.jpg' %}" ></div>
+<h1 class="text-capitalize font-weight-bold" style="padding-top: 5px;" align="center">Our Products</h1>
+<div class="container">
+  <div class="row">
+  	{% for i in 'iiiiiiii' %}
+  	<div class="col-9 mx-auto col-md-6 col-lg-3">
+  		<div class="card-md-4">
+  			<img class="card-img-top" src="{% static 'images/док.jpg' %}">
+  		</div>
+  	</div>
+  	{% endfor %}
+    
+</div>
+ 
+</div>
 {% endblock %}
