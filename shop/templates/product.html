@@ -4,8 +4,11 @@ Product{% endblock %}
 {% load static %}
 {% block content %}
 <div class="container py-5">
-	<div class="row mt-5"><div class="col-10 mx-auto col-md-6 my-3"><img src="{% static 'images/отв1.jpg' %}"></div></div>
-	<div class="col-10 mx-auto col-md-6 my-3"><h1>Отвертка 10 доктора</h1><h2>Цена: 10$</h2></div>
+	<div class="row mt-5"><div class="col-10 mx-auto col-md-6 my-3"><img src="{{product.image.url}}"></div></div>
+	<div class="col-10 mx-auto col-md-6 my-3"><h1>{{product.name}}</h1><h2>Цена: {{product.price}}$</h2>
+	{% if product.stoke <= 0 %}
+	<p class="text-justify product_text">Out of stock</p>{% else %}
+	<a href="">Add to Cart</a>{% endif %} </div>
 
 </div>
 

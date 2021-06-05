@@ -10,7 +10,7 @@ Home{% endblock %}
   	{% for i in products %}
   	<div class="col-9 mx-auto col-md-6 col-lg-4">
   		<div class="card mb-4">
-        <div class="p-4"><img class="card-img-top" src="{{i.image.url}}" alt="{{i.name}}"></div>
+        <div class="p-4"><a href="{{i.get_url}}"><img class="card-img-top" src="{{i.image.url}}" alt="{{i.name}}"></a></div>
   			
 
 			<div class="card-footer d-flex justify-content-between">
