@@ -8,7 +8,7 @@ Product{% endblock %}
 	<div class="col-10 mx-auto col-md-6 my-3"><h1>{{product.name}}</h1><h2>Цена: {{product.price}}$</h2>
 	{% if product.stoke <= 0 %}
 	<p class="text-justify product_text">Out of stock</p>{% else %}
-	<a href="">Add to Cart</a>{% endif %} </div>
+	<a href="{% url 'add_cart' product.id %}">Add to Cart</a>{% endif %} </div>
 
 </div>
 
