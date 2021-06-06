@@ -12,8 +12,11 @@
           </li>
           <li class="nav-item"><a class='nav-link text-uppercase text-light' href="">Contacts</a> </li>
           <li class="nav-item"><a class="nav-link text-uppercase text-light" href="">About</a> </li>
+          {% if item_count > 0 %}
+           <li class="nav-item"><a class="nav-link text-uppercase text-light" href="{% url 'cart_detail' %}"><i class="material-icons">add_shopping_cart</i>({{item_count}})</a> </li>{% endif %}
+          }
         </ul>
-        <form style="position:relative;left:1450px" class="form-inline">
+        <form style="position:relative;left:1350px" class="form-inline">
           <div class="input-group">
             <input type="text" placeholder="search">
             <button><i class="material-icons ">search</i></button>
